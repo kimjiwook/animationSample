@@ -23,12 +23,12 @@ class ViewController: UIViewController {
     func setFrameImageView() {
         /// ImageArray init
         let frameImageArray = NSMutableArray()
-        for i in 1..<21 {
+        for i in 10..<21 {
             frameImageArray.add(UIImage.init(contentsOfFile: Bundle.main.path(forResource: "icon\(i)@2x", ofType: "png")! ) as Any)
         }
         
         frameImageView.animationImages = frameImageArray as? [UIImage]
-        frameImageView.animationDuration = 1.25
+        frameImageView.animationDuration = 0.75
         frameImageView.animationRepeatCount = 0 // 0 means infinite (default is 0)
         frameImageView.startAnimating()
     }
